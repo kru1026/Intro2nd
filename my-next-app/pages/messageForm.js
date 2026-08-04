@@ -123,6 +123,14 @@ export default function MessagesPage() {
             className={styles.messageCard}
             key={item._id}
           >
+            <p className={styles.createdTime}>
+              {new Date(item.createdAt).toLocaleString("en-CA", {
+                timeZone: "America/Toronto",
+                dateStyle: "medium",
+                timeStyle: "short",
+              })}
+            </p>
+
             <h3>{item.name}</h3>
             <p>{item.email}</p>
             <p>{item.message}</p>
