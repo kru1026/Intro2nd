@@ -62,6 +62,8 @@ export default function Projects() {
           >
             Project: Find Me a Tutor
           </a>
+          <p className="FMaTDes">Register and login as student, tutor, or admin will unlock different functionalities. Sample student account - <br />User: kru1026 Password: 1111</p>
+
 
           <a 
             className="project-link" 
@@ -71,12 +73,13 @@ export default function Projects() {
           >
             Project: Metropolitan Museum of Art
           </a>
+          <p className="MMoADes">Register and login one user account to explore the functionalities, Search Query can be “Book”, “Toy”, “Weapon”. Sample account - User: kru1026 Password: 1111</p>
         </div>
         <br />
         <p>These projects used a free platform to keep them hosted online. Due to limitations,
           the host may shut down the services after inactivities. Everytime these web pages
           are opened, it takes time for the server to setup. Please wait 3 to 5 minutes for the
-          backend to fire up. If it is not finished loading after 5 minutes, please let me know.
+          backend to fire up.
         </p>
 
       </div>
@@ -88,6 +91,14 @@ export default function Projects() {
           gap: 12px;
           margin-top: 30px;
           color: green;
+        }
+
+        .projects .FMaTDes{
+          color: black;
+        }
+
+        .projects .MMoADes{
+          color: black;        
         }
 
         .page {
