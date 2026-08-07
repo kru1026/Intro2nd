@@ -78,8 +78,9 @@ export default function Projects() {
         <br />
         <p>These projects used a free platform to keep them hosted online. Due to limitations,
           the host may shut down the services after inactivities. Everytime these web pages
-          are opened, it takes time for the server to setup. Please wait 3 to 5 minutes for the
-          backend to fire up.
+          are opened, it takes time for the server to setup. <span style={{ color: "#d9534f", fontWeight: "bold" }}> Please wait 
+          3 to 5 minutes
+          for the backend to fire up.</span>
         </p>
 
       </div>
