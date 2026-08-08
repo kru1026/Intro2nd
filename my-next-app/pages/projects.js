@@ -77,9 +77,9 @@ export default function Projects() {
         </div>
         <br />
         <p className="frozenStatement">These projects use free hosting, services may shut down after inactivity. 
-          <span className="redText"> Please allow 2–4 minutes for the backend to restart</span>. 
-          The projects may <span className="redText">appear frozen</span> while the backend/data is loading or 
-          attempting to use database operations such as register or login before the backend is restarted.</p>
+          <span className="redText"> Please allow 2–4 minutes for the backends to restart</span>. 
+          The projects may <span className="redText">appear frozen</span> while the backends are loading or 
+          attempting to use database operations such as register or login before the backends are restarted.</p>
 
       </div>
 
