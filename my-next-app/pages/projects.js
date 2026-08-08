@@ -76,11 +76,10 @@ export default function Projects() {
           <p className="MMoADes">Register and login one user account to explore the functionalities, Search Query can be “Book”, “Toy”, “Weapon”. Sample account - User: kru1026 Password: 1111</p>
         </div>
         <br />
-        <p>These projects used a free platform to keep them hosted online. Due to limitations,
-          the host may shut down the services after inactivity. Every time these web pages
-          are open, it takes time for the server to setup. <span style={{ color: "#d9534f", fontWeight: "bold" }}> Please wait 
-          3 to 5 minutes for the backend to fire up after opening the home page.</span>
-        </p>
+        <p className="frozenStatement">These projects use free hosting, services may shut down after inactivity. 
+          <span className="redText"> Please allow 3–5 minutes for the backend to restart</span>. 
+          The projects may <span className="redText">appear frozen</span> while the backend/data is loading or 
+          attempting to use database operations such as register or login before the backend is restarted.</p>
 
       </div>
 
@@ -99,6 +98,14 @@ export default function Projects() {
 
         .projects .MMoADes{
           color: black;        
+        }
+
+        .frozenStatement{
+          color: black;
+        }
+
+        .redText{
+          color: red;
         }
 
         .page {
