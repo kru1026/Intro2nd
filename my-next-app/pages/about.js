@@ -8,16 +8,16 @@ export default function AboutMe() {
 
         <p>
           Hello! I am a <span className="highlight">passionate software developer</span>{" "}
-          focused on building responsive, scalable, and user-friendly web
-          applications.
-        </p>
+          who enjoys building responsive, scalable, and user-friendly applications.
+        </p><br />
 
         <p>
-          I enjoy solving real-world problems through clean and maintainable
-          code. I have experience building modern applications using{" "}
-          <span className="highlight">
-            Next.js, Node.js, Express.js, JavaScript, SQL, and cloud technologies.
-          </span>
+          I’m driven by solving real-world problems through clean, efficient, and maintainable code. 
+          With hands-on experience in <span className="highlight">Next.js, Node.js, Express.js, JavaScript, SQL, and cloud technologies</span>.
+        </p><br />
+
+        <p>
+          I strive to create modern, reliable, and high-performing applications that deliver great user experiences.
         </p>
       </div>
 

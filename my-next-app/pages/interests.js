@@ -57,7 +57,7 @@ export default function Interests() {
           <div className="card">
             <div className="emoji">🎮</div>
             <h3>Musics</h3>
-            <p>Playing strategy and multiplayer games that encourage critical thinking and teamwork.Value music as a source of inspiration and motivation, helping maintain focus
+            <p>Value music as a source of inspiration and motivation, helping maintain focus
                and a positive mindset during work and personal projects.</p>
           </div>
 

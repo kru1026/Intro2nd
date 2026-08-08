@@ -70,9 +70,10 @@ export default function MessagesPage() {
 
     {/* Leave message form */}
     <form className={styles.form} onSubmit={sendMessage}>
-      <h1 className={styles.title}>
-        Leave a Message
-      </h1>
+      <div className={styles.titleRow}>
+        <h1 className={styles.title}>Leave a Message</h1>
+        <p style={{color:"red"}}>(Please allow 2 minutes for backend to restart after opening this page)</p>
+      </div>
 
       <p className={styles.subtitle}>
         Send us a message and we will get back to you.
