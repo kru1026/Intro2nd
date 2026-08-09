@@ -31,6 +31,7 @@ export default function MessagesPage() {
 
   useEffect(() => {
     getMessages();
+    console.log("FEFWEF", backendReady);
   }, []);
 
 
