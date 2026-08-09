@@ -10,10 +10,6 @@ app.use(cors({
 
 app.use(express.json());
 
-app.get("/healthCheck", (req, res) => {
-    res.status(200).json({ name: 'John Doe' })
-});
-
 app.use("/api/messages", messageRoutes);
 
 module.exports = app;
