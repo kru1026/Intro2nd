@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import { useSetAtom } from "jotai";
-import { backendReadyAtom } from "./atoms/backendAtom";
+import { backendReadyAtom } from "../atoms/backendAtom";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -26,7 +26,9 @@ export default function Home() {
     }
 }
 
+useEffect(() => {
   healthCheck();
+}, []);
 
   return (
     <main
