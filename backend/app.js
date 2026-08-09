@@ -6,15 +6,15 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-  origin: [
-    "http://localhost:3000",
-    "https://intro2nd.vercel.app"
-  ]
-}));
+app.use(cors());
 
 app.get("/healthCheck", (req, res) => {
-    res.status(200).json({ name: 'John Doe' })
+  console.log("Origin:", req.headers.origin);
+
+  res.json({
+    status: "ok",
+    origin: req.headers.origin
+  });
 });
 
 app.use("/api/messages", messageRoutes);
