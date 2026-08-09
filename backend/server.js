@@ -5,6 +5,13 @@ const connectDB = require("./config/mongoDB");
 
 const PORT = process.env.PORT || 8080;
 
+app.use(cors({
+  origin: [
+    "http://localhost:3000",
+    "https://intro2nd.vercel.app"
+  ]
+}));
+
 app.get("/healthCheck", (req, res) => {
     res.status(200).json({ name: 'John Doe' })
 });
