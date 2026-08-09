@@ -10,7 +10,7 @@ export default function Home() {
 
   async function healthCheck() {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/healthCheck`, {
             method: 'GET',
         });
         if (!res.ok) {
