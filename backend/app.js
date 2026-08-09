@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("API running");
+    res.status(200).json({ name: 'John Doe' })
 });
 
 app.use("/api/messages", messageRoutes);
