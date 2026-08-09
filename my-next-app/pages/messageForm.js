@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import styles from "./message.module.css";
 import { useAtomValue } from "jotai";
-import { backendReadyAtom } from "@/store";
+import { backendReadyAtom } from "./atoms";
 
 export default function MessagesPage() {
   const [name, setName] = useState("");
