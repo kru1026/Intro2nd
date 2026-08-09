@@ -26,9 +26,7 @@ export default function Home() {
     }
 }
 
-  useEffect(() => {
-    healthCheck();
-  }, []);
+  healthCheck();
 
   return (
     <main

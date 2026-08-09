@@ -32,11 +32,7 @@ export default function MessagesPage() {
   console.log("🔥 COMPONENT RENDERED");
 
   useEffect(() => {
-    console.log("🔥 USE EFFECT RAN");
-
     getMessages();
-
-    console.log("backendReady:", backendReady);
   }, []);
 
 
