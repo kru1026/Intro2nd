@@ -7,8 +7,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/healthCheck", (req, res) => {
+app.get("/", (req, res) => {
     res.status(200).json({ name: 'John Doe' })
+});
+
+app.get("/healthCheck", (req, res) => {
+    res.status(200).json({ name: 'Health Check' })
 });
 
 app.use("/api/messages", messageRoutes);
