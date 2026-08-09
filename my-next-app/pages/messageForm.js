@@ -13,6 +13,7 @@ export default function MessagesPage() {
   const [messages, setMessages] = useState([]);
 
   const backendReady = useAtomValue(backendReadyAtom);
+  console.log("BackendReady = ", backendReady);
 
   async function getMessages() {
     try {

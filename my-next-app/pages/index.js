@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useSetAtom } from "jotai";
 import { backendReadyAtom } from "../atoms/backendAtom";
-import { useEffect } from "react";
+import { use, useEffect } from "react";
 
 export default function Home() {
 
@@ -13,6 +13,8 @@ export default function Home() {
         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/healthCheck`, {
             method: 'GET',
         });
+        const url = `${process.env.NEXT_PUBLIC_API_URL}/healthCheck`;
+        console.log("Health check URL:", url);
         if (!res.ok) {
             const errorData = await res.json();
             throw new Error(errorData.message || "Failed health check");
