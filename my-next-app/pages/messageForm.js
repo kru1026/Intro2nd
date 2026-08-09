@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import styles from "./message.module.css";
+import { useAtomValue } from "jotai";
+import { backendReadyAtom } from "@/store";
 
 export default function MessagesPage() {
   const [name, setName] = useState("");
@@ -9,6 +11,8 @@ export default function MessagesPage() {
   const [message, setMessage] = useState("");
 
   const [messages, setMessages] = useState([]);
+
+  const backendReady = useAtomValue(backendReadyAtom);
 
   async function getMessages() {
     try {
@@ -72,7 +76,12 @@ export default function MessagesPage() {
     <form className={styles.form} onSubmit={sendMessage}>
       <div className={styles.titleRow}>
         <h1 className={styles.title}>Leave a Message</h1>
-        <p style={{color:"red"}}>(Please wait 2 minutes for backend to restart after opening this page, previous messages are loading...)</p>
+        {!backendReady && (
+          <p style={{ color: "red" }}>
+            Please wait 2-4 minutes for the backend to restart. When this message
+            disappears, the backend is ready.
+          </p>
+        )}
       </div>
 
       <p className={styles.subtitle}>

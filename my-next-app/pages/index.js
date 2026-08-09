@@ -1,7 +1,32 @@
 
 import Link from "next/link";
+import { useSetAtom } from "jotai";
+import { backendReadyAtom } from "./atoms";
 
 export default function Home() {
+
+  const setBackendReady = useSetAtom(backendReadyAtom);
+
+  async function healthCheck() {
+    try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/`, {
+            method: 'GET',
+        });
+        if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(errorData.message || "Failed health check");
+        }
+        const data = await res.json();
+        setBackendReady(true);
+        return data;
+    } catch (error) {
+        console.error("Error fetching appointments:", error);
+        throw error; 
+    }
+}
+
+  healthCheck();
+
   return (
     <main
       style={{
