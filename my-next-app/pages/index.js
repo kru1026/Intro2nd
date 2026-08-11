@@ -113,6 +113,13 @@ useEffect(() => {
         <hr />
 
         <section>
+          <Link href="/experience" style={{ textDecoration: "none" }}>
+            <h2 style={{ marginBottom: "15px", marginTop: "15px" }}>Experience</h2>
+          </Link>
+        </section>
+        <hr />
+
+        <section>
           <Link href="/hireme" style={{ textDecoration: "none" }}>
             <h2 style={{ marginBottom: "15px", marginTop: "15px" }}>Why Hire Me?</h2>
           </Link>

@@ -9,8 +9,6 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/healthCheck", (req, res) => {
-  console.log("Origin:", req.headers.origin);
-
   res.json({
     status: "ok",
     origin: req.headers.origin

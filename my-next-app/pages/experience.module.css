@@ -1,0 +1,129 @@
+.experience {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 24px 80px;
+  color: #18181b;
+}
+
+.experienceTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 60px;
+  padding-bottom: 16px;
+  color: #18181b;
+  border-bottom: 1px solid #d4d4d8;
+}
+
+/* Experience item */
+.experienceItem {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 45px;
+  padding: 35px 0;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.experienceItem:last-child {
+  border-bottom: none;
+}
+
+/* Header */
+.experienceHeader {
+  display: contents;
+}
+
+.experienceDate {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+
+  color: #71717a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Main content */
+.experienceRole {
+  grid-column: 2;
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: #18181b;
+  line-height: 1.3;
+}
+
+.experienceCompany {
+  grid-column: 2;
+  margin: 6px 0 20px;
+  font-size: 15px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Responsibilities */
+.experienceList {
+  grid-column: 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experienceList li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 12px;
+  color: #52525b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.experienceList li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #a1a1aa;
+}
+
+.experienceList li:last-child {
+  margin-bottom: 0;
+}
+
+/* Hover */
+.experienceRole {
+  transition: color 0.2s ease;
+}
+
+.experienceItem:hover .experienceRole {
+  color: #2563eb;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .experience {
+    padding: 40px 20px 60px;
+  }
+
+  .experienceTitle {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+  .experienceItem {
+    display: block;
+    padding: 30px 0;
+  }
+
+  .experienceDate {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .experienceRole {
+    font-size: 21px;
+  }
+
+  .experienceCompany {
+    margin-bottom: 18px;
+  }
+}
