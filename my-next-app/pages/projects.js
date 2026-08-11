@@ -60,7 +60,7 @@ export default function Projects() {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Project: Find Me a Tutor
+            Project: Find Me a Tutor (Click Me)
           </a>
           <p className="FMaTDes">Register and login as student, tutor, or admin will unlock different functionalities. Sample student account - <br />User: kru1026 Password: 1111</p>
 
@@ -71,7 +71,7 @@ export default function Projects() {
             target="_blank" 
             rel="noopener noreferrer"
           >
-            Project: Metropolitan Museum of Art
+            Project: Metropolitan Museum of Art (Click Me)
           </a>
           <p className="MMoADes">Register and login one user account to explore the functionalities, Search Query can be “Book”, “Toy”, “Weapon”. Sample account - User: kru1026 Password: 1111</p>
         </div>
