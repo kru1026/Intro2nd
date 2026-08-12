@@ -13,6 +13,7 @@ export default function TechnicalSkills() {
           <span>Express.js</span>
           <span>Next.js</span>
           <span>Git</span>
+          <span>CI/CD</span>
           <span>RESTful APIs</span>
         </div>
 
