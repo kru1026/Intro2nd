@@ -68,86 +68,89 @@ export default function MessagesPage() {
     }
   }
 
-
-  return (
+return (
   <main className={styles.page}>
 
-    {/* Leave message form */}
-    <form className={styles.form} onSubmit={sendMessage}>
-      <div className={styles.titleRow}>
-        <h1 className={styles.title}>Leave a Message</h1>
-        {!backendReady && (
-          <p style={{ color: "red" }}>
+    {!backendReady ? (
+          <h5 style={{ color: "red" }}>
             Please wait 2-4 minutes for the backend to restart. When this message
             disappears, the backend is ready.
-          </p>
-        )}
-      </div>
-
-      <p className={styles.subtitle}>
-        Send us a message and we will get back to you.
-      </p>
-
-      <input
-        className={styles.input}
-        placeholder="Your name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
-      />
-
-      <input
-        className={styles.input}
-        placeholder="Your email"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-
-      <textarea
-        className={styles.textarea}
-        placeholder="Your message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
-      />
-
-      <button className={styles.button} type="submit">
-        Send Message
-      </button>
-    </form>
-
-
-    {/* Saved messages below */}
-    <section className={styles.messages}>
-      <h2>Previous Messages</h2>
-
-      {messages.length === 0 ? (
-        <p className={styles.noMessages}>
-          No messages yet.
-        </p>
-      ) : (
-        messages.map((item) => (
-          <div
-            className={styles.messageCard}
-            key={item._id}
-          >
-            <p className={styles.createdTime}>
-              {new Date(item.createdAt).toLocaleString("en-CA", {
-                timeZone: "America/Toronto",
-                dateStyle: "medium",
-                timeStyle: "short",
-              })}
-            </p>
-
-            <h3>{item.name}</h3>
-            <p>{item.email}</p>
-            <p>{item.message}</p>
+          </h5>
+    ) : (
+      <>
+        {/* Leave message form */}
+        <form className={styles.form} onSubmit={sendMessage}>
+          <div className={styles.titleRow}>
+            <h1 className={styles.title}>Leave a Message</h1>
           </div>
-        ))
-      )}
-    </section>
+
+          <p className={styles.subtitle}>
+            Send us a message and we will get back to you.
+          </p>
+
+          <input
+            className={styles.input}
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+
+          <input
+            className={styles.input}
+            placeholder="Your email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+
+          <textarea
+            className={styles.textarea}
+            placeholder="Your message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+
+          <button className={styles.button} type="submit">
+            Send Message
+          </button>
+        </form>
+
+        {/* Saved messages below */}
+        <section className={styles.messages}>
+          <h2>Previous Messages</h2>
+
+          {messages.length === 0 ? (
+            <p className={styles.noMessages}>
+              No messages yet.
+            </p>
+          ) : (
+            messages.map((item) => (
+              <div
+                className={styles.messageCard}
+                key={item._id}
+              >
+                <p className={styles.createdTime}>
+                  {new Date(item.createdAt).toLocaleString("en-CA", {
+                    timeZone: "America/Toronto",
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                  })}
+                </p>
+
+                <h3>{item.name}</h3>
+                <p>{item.email}</p>
+                <p>{item.message}</p>
+              </div>
+            ))
+          )}
+        </section>
+      </>
+    )}
 
   </main>
-)};
+);
+  
+};
